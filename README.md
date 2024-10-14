@@ -59,10 +59,37 @@ nomad node status
 terraform destroy 
 ```
 
-## Test with NGINX & Consult with Nomad
+## Test with NGINX & Consult with Nomad (works)
 
 ```bash
 ./kv_consul_setup.sh
 
 nomad run nginx-consul.nomad
+```
+
+## Load balancer with webapp (works)
+
+```bash
+nomad run webapp.nomad
+
+nomad run nginx.nomad.hcl
+
+nomad status nginx
+
+nomad alloc fs 766 nginx/local/load-balancer.conf
+
+curl nginx.service.consul:8080
+```
+
+## Traefik with Webapp (works)
+
+```bash
+nomad run webapp.nomad.hcl
+nomad run traefik.nomad.hcl
+
+nomad status traefik
+
+http://<Your-Traefik-IP-address>:8081
+
+curl http://traefik.service.consul:8080/myapp
 ```
