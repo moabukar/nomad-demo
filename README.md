@@ -9,6 +9,16 @@ Demo repo to show Nomad in action.
 - Packer installed (<https://developer.hashicorp.com/packer/downloads>)
 - AWS CLI installed (<https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html>)
 
+## Run local Nomad cluster
+
+```bash
+nomad agent -dev
+
+nomad run local/http-echo.nomad
+
+localhost:4646
+```
+
 ## Setup
 
 1. Start Nomad
