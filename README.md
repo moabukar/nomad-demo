@@ -17,6 +17,8 @@ nomad agent -dev
 nomad run local/http-echo.nomad
 
 localhost:4646
+
+nomad stop http-echo
 ```
 
 ## Setup
