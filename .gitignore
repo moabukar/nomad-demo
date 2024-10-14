@@ -1,2 +1,5 @@
 .DS_Store
 *.env
+/data
+/packer_cache
+/alloc_mounts

@@ -1,4 +1,4 @@
-data_dir = "./data"
+data_dir = "/Users/mohameda/Documents/learning/nomad-demo/data"
 
 server {
   enabled          = true

@@ -13,21 +13,8 @@ job "nginx" {
       }
 
       resources {
-        cpu    = 500 # 500 MHz
-        memory = 256 # 256MB
-      }
-
-      service {
-        name = "nginx"
-        port = "http"
-
-        check {
-          name     = "nginx alive"
-          type     = "http"
-          path     = "/"
-          interval = "10s"
-          timeout  = "2s"
-        }
+        cpu    = 500
+        memory = 256
       }
     }
 

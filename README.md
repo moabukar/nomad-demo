@@ -5,6 +5,9 @@ Demo repo to show Nomad in action.
 ## Prerequisites
 
 - Nomad installed (<https://developer.hashicorp.com/nomad/docs/install>)
+- Terraform installed (<https://developer.hashicorp.com/terraform/downloads>)
+- Packer installed (<https://developer.hashicorp.com/packer/downloads>)
+- AWS CLI installed (<https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html>)
 
 ## Setup
 
@@ -54,4 +57,12 @@ nomad node status
 ## Cleanup
 
 terraform destroy 
+```
+
+## Test with NGINX & Consult with Nomad
+
+```bash
+./kv_consul_setup.sh
+
+nomad run nginx-consul.nomad
 ```
